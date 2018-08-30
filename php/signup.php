@@ -19,6 +19,8 @@ $params = validateParams($_REQUEST);
 	$name = $params['name'];
 	$email = $params['email'];	
 	$phone = $params['phone'];
+	$bloodGroup = $params['bloodGroup'];
+	$dob = $params['dob'];
 	$password = md5($params['password']);
 
 // echo '<pre>';
@@ -37,7 +39,7 @@ $params = validateParams($_REQUEST);
 		echo json_encode($result);
 		die;
 		} else{
-		$sql = "INSERT INTO `users` (`id`, `name`, `email`, `mobile`, `password`) VALUES (NULL, '".$name."', '".$email."', '".$phone."', '".$password."')";
+		$sql = "INSERT INTO `users` (`id`, `name`, `email`, `mobile`, `Bgroup`, `dob`, `password`) VALUES (NULL, '".$name."', '".$email."', '".$phone."', '".$bloodGroup."', '".$dob."', '".$password."')";
 		$res = mysqli_query($con,$sql);
 		$check = mysqli_query($con,$getQuery);
 		 while($row = $check->fetch_assoc())

@@ -26,6 +26,8 @@ die;
                 <input type="email" name="email" value="" placeholder="Enter email" required>
                 <p>Phone</p>
                 <input type="text" name="phone" value="" placeholder="Enter mobile number" required>
+                <p>D.O.B</p>
+                <input type="date" name="dob" value=""  required>
                 <p>Blood Group</p>
                 <select name="bloodGroup" required>
                     <option value="a.p">A +</option>
@@ -70,13 +72,6 @@ die;
             var email = $("#email").val();
             var password = $("#password").val();
             var cpassword = $("#cPassword").val();
-            alert(password);
-            alert(cpassword);
-            // var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-            // if(!regex.test(email)){
-            //     alert("invalid email id");
-            //     return false;
-            // }
             if(password.length < 8){
                 alert("password must be more than 8 characters");
                 return false;
